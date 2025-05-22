@@ -8,6 +8,10 @@ from aiohttp import ClientSession
 from typing import List, Dict
 
 
+OPENAI_API_KEY = "your-api-key"
+PROXY = "http://your-proxy:port"
+
+
 class OpenAIApi:
     def __init__(self, key: str, proxy: str) -> None:
         self.key = key
@@ -36,8 +40,8 @@ tools = {
 
 
 async def run_chat():
-    key = "sk-..."  
-    proxy = "http://127.0.0.1:7890"  
+    key = OPENAI_API_KEY
+    proxy = PROXY
 
     openai_api = OpenAIApi(key, proxy)
 
